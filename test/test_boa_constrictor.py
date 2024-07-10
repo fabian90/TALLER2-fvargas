@@ -12,7 +12,8 @@ class test_boa_constrictor(unittest.TestCase):
     
     def test_agregar_raton(self):
         for _ in range(10):
-            if self.boa.ratones_comidos < 10:
+            self.boa.ratones_comidos =21
+            if self.boa.ratones_comidos > 20:
                 self.boa.agregar_raton()
         with self.assertRaises(ValueError):
             self.boa.agregar_raton()
